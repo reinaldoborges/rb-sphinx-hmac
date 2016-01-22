@@ -1,0 +1,34 @@
+{
+    "name": "rb/sphinx-hmac",
+    "description": "PHP Hash-based Message Authentication Code (HMAC)",
+    "license": "Apache-2.0",
+    "keywords": [
+        "rb",
+        "hmac"
+    ],
+    "homepage": "https://github.com/reinaldoborges/rb-sphinx-hmac",
+    "autoload": {
+        "psr-4": {
+            "RB\\Sphinx\\Hmac\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.5"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev",
+            "dev-develop": "0.1-dev"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ZendTest\\Http\\": "test/"
+        }
+    },
+    "require-dev": {
+        "phpunit/PHPUnit": "~4.0"
+    }
+}
