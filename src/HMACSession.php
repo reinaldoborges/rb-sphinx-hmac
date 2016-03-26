@@ -185,6 +185,26 @@ class HMACSession extends HMAC {
 	}
 	
 	/**
+	 *
+	 * @param string $nonceValue
+	 * @return \RB\Sphinx\Hmac\HMAC
+	 */
+	public function setNonce2Value($nonceValue) {
+		/**
+		 * Verifica o NONCE.
+		 * Dispara exceção caso o nonce seja recusado.
+		 */
+		$this->nonce2->validate ( $nonceValue );
+	
+		/**
+		 * Registra nonce após validação
+		*/
+		$this->nonce2->setNonce ( $nonceValue );
+		return $this;
+	}
+	
+	
+	/**
 	 * (non-PHPdoc)
 	 * 
 	 * @see \RB\Sphinx\Hmac\HMAC::getDescription()
