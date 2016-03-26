@@ -19,6 +19,6 @@ class DummyHash extends HMACHash {
 	 * @see \RB\Sphinx\Hmac\Hash\HMACHash::getHash()
 	 */
 	public function getHash($data) {
-		return 'H(' . $data . ')';
+		return 'H(' . strtr($data,':','|') . ')';
 	}
 }
