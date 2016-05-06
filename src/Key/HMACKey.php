@@ -57,6 +57,7 @@ abstract class HMACKey {
 	public function getCompositeKey(HMAC $hmac) {
 		$hmacKey = '';
 		$algo = $hmac->getAlgorithm ();
+		$this->setId( $hmac->getKeyId() );
 		
 		if ($hmac instanceof HMACSession) {
 			/**
